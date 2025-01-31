@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Ultimate Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 Tic Tac Toe 🌟</h1>
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeCheckbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="game-mode">
+            <button onclick="startGame('1player')">🤖 Play vs Computer</button>
+            <button onclick="startGame('2player')">👥 Two Players</button>
+        </div>
+
+        <div class="difficulty hidden" id="difficulty">
+            <h3>Choose Difficulty:</h3>
+            <button onclick="setDifficulty('easy')">😊 Easy</button>
+            <button onclick="setDifficulty('medium')">😐 Medium</button>
+            <button onclick="setDifficulty('hard')">😠 Hard</button>
+        </div>
+
+        <div class="status hidden" id="status"></div>
+        
+        <div class="game-board hidden" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls hidden" id="controls">
+            <button onclick="resetGame()">🔄 Reset Game</button>
+        </div>
+
+        <div id="winnerModal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="winnerMessage"></h2>
+                <button onclick="closeModal()">Play Again</button>
+                <button onclick="fullReset()">Main Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
